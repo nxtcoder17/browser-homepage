@@ -40,6 +40,11 @@ body {
 
 .items:focus {
     border-color: var(--my-green);
+    outline: none !important;
+}
+
+button::-moz-focus-inner {
+    border: none;
 }
 
 /* Competitive Programming Table Block */
