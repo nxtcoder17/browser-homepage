@@ -1,0 +1,41 @@
+# extends "base.html"
+
+# block content
+    <div class='items_row'>
+        <button class='items' id='cp'>Competitive Programming</button>
+        <button class='items' id='football'>Football</button>
+    </div>
+
+    <div id='block_cp'>
+        <table>
+        # set ns = namespace (count = 5)
+        # for site in cp_sites:
+            # if ns.count == 5:
+            <tr>
+            # endif
+             # set ns.count = ns.count - 1
+                <td class='block_cp_items'>
+                    <a target='_blank' href="{{ site.url }}">
+                        <img src="{{ url_for ('static', filename='images/cp/' + site.img) }}">
+                    </a>
+                </td>
+            # if ns.count == 0:
+                # set ns.count = 5
+            </tr>
+            # endif
+        # endfor
+        </table>
+    </div>
+# endblock
+
+# block scripts
+    $(document).ready (function () { 
+        $("#cp").click (function () {
+            $("#block_cp").fadeToggle();
+        });
+        $("#football").click (function () {
+            document.getElementById ("block_cp").style.display = "none";
+        });
+    });
+
+# endblock

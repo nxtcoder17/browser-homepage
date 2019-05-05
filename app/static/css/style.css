@@ -1,0 +1,64 @@
+:root {
+    --font: Cantarell;
+    --my-green: #42f486;
+}
+
+body {
+    background-color: black;
+}
+
+#banner {
+    text-align: center;
+    color: dodgerblue;
+    font-family: var(--font);
+    font-size: 50px;
+    margin: 0px;
+}
+
+.items_row {
+    display: inline-block;
+}
+
+.items {
+    color: dodgerblue;
+    background-color: transparent;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var (--font);
+    border-radius: 50px;
+    border: 3px solid tomato;
+}
+
+.items:hover {
+    cursor: pointer;
+    /* background-color: black; */
+    color: tomato;
+    border-color: dodgerblue;
+}
+
+.items:focus {
+    border-color: var(--my-green);
+}
+
+/* Competitive Programming Table Block */
+
+#block_cp {
+    display: none;
+    /* border: 2px solid red; */
+    background-color: black;
+    border: 5px solid var(--my-green);
+}
+
+#block_cp img {
+    width: 220px;
+    max-height: 75px;
+    filter: invert(100%);
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.block_cp_items:hover {
+    border: 4px dashed tomato;
+}
