@@ -6,6 +6,7 @@
         <button class='items' id='football'>Football</button>
     </div>
 
+    <!-- Competitive Programming Block that appears after click on "#cp" button -->
     <div id='block_cp'>
         <table>
         # set ns = namespace (count = 5)
@@ -26,6 +27,22 @@
         # endfor
         </table>
     </div>
+
+    <div id='block_football'>
+    </div>
+
+    <div id='search_box'>
+        <center>
+        <select id='search_engine'>
+            <option value='google'>Google</option>
+            <option value='duckduckgo'>Duck Duck Go</option>
+            <option value='google_images'>Google Images</option>
+        </select>
+
+        <input type='text' id='query'>
+        <button type='button' id='submit' onclick='search_query();'>search</button>
+        </center>
+    </div>
 # endblock
 
 # block scripts
@@ -33,6 +50,7 @@
         $("#cp").click (function () {
             $("#block_cp").fadeToggle();
         });
+
         $("#football").click (function () {
             document.getElementById ("block_cp").style.display = "none";
         });

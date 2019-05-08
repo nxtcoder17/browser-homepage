@@ -3,6 +3,10 @@
     --my-green: #42f486;
 }
 
+* {
+    outline: none !important;
+}
+
 body {
     background-color: black;
 }
@@ -66,4 +70,56 @@ button::-moz-focus-inner {
 
 .block_cp_items:hover {
     border: 4px dashed tomato;
+}
+
+/* Search Box */
+#search_box input {
+    width: 50%;
+    height: 40px;
+    color: dodgerblue;
+    background-color: black;
+    font-size: 15px;
+    font-family: "Hack Nerd Font";
+    border: 2px dashed tomato;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 2px;
+}
+
+#search_box button {
+    height: 40px;
+    border: 2px solid tomato;
+    color: dodgerblue;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 50px;
+}
+
+#search_box button:hover {
+    background-color: tomato;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search_engine {
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    font-size: 15px;
+    text-align: center;
+    color: dodgerblue;
+    border: 2px solid tomato;
+    border-radius: 50px;
+}
+
+#search_engine:focus {
+    outline: none !important;
+}
+
+#search_engine option {
+    background-color: black;
+    color: tomato;
+    font-size: 20px;
 }
