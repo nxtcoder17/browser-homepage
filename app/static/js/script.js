@@ -1,6 +1,6 @@
 var dict = {
-    'google': 'https://google.com/search?q=QUERY',
-    'duckduckgo': 'https://duckduckgo.com/q=QUERY',
+    'google': 'https://www.google.com/search?q=QUERY',
+    'duckduckgo': 'https://www.duckduckgo.com/q=QUERY',
     'google_images': 'https://www.google.com/search?tbm=isch&q=QUERY'
 };
 

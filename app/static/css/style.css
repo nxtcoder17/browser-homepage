@@ -53,14 +53,15 @@ button::-moz-focus-inner {
 
 /* Competitive Programming Table Block */
 
-#block_cp {
+.block {
     display: none;
     /* border: 2px solid red; */
     background-color: black;
     border: 5px solid var(--my-green);
+    margin: 5px;
 }
 
-#block_cp img {
+.block img {
     width: 220px;
     max-height: 75px;
     filter: invert(100%);

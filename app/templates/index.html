@@ -1,34 +1,43 @@
 # extends "base.html"
 
+# macro put_all_in_a_table (list, cols)
+<table>
+        # set ns = namespace (count = cols)
+        # for site in list:
+            # if ns.count == cols:
+                <tr>
+            # endif
+            # set ns.count = ns.count - 1
+            <td class='block_items'> 
+                <a target="_blank" href="{{ site.url }}">
+                <img src="{{ url_for ('static', filename='images/' + site.img) }}">
+                </a> 
+            </td> 
+            # if ns.count == 0:
+                </tr>
+                # set ns.count = cols
+            # endif
+        # endfor
+</table>
+# endmacro
+
 # block content
     <div class='items_row'>
         <button class='items' id='cp'>Competitive Programming</button>
+        <button class='items' id='study'>Studying</button>
         <button class='items' id='football'>Football</button>
     </div>
 
     <!-- Competitive Programming Block that appears after click on "#cp" button -->
-    <div id='block_cp'>
-        <table>
-        # set ns = namespace (count = 5)
-        # for site in cp_sites:
-            # if ns.count == 5:
-            <tr>
-            # endif
-             # set ns.count = ns.count - 1
-                <td class='block_cp_items'>
-                    <a target='_blank' href="{{ site.url }}">
-                        <img src="{{ url_for ('static', filename='images/cp/' + site.img) }}">
-                    </a>
-                </td>
-            # if ns.count == 0:
-                # set ns.count = 5
-            </tr>
-            # endif
-        # endfor
-        </table>
+    <div class='block' id='_cp'>
+        {{ put_all_in_a_table (cp_sites, 5) }}
     </div>
 
-    <div id='block_football'>
+    <div class='block' id='_study'>
+        {{ put_all_in_a_table (study_sites, 5) }}
+    </div>
+
+    <div class='block'>
     </div>
 
     <div id='search_box'>
@@ -48,7 +57,13 @@
 # block scripts
     $(document).ready (function () { 
         $("#cp").click (function () {
-            $("#block_cp").fadeToggle();
+            $("#_study").hide();
+            $("#_cp").fadeToggle();
+        });
+
+        $("#study").click (function () {
+            $("#_cp").hide();
+            $("#_study").fadeToggle();
         });
 
         $("#football").click (function () {
