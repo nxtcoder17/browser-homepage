@@ -21,11 +21,12 @@
 </table>
 # endmacro
 
-# block content
+# block content 
     <div class='items_row'>
         <button class='items' id='cp'>Competitive Programming</button>
         <button class='items' id='study'>Studying</button>
         <button class='items' id='football'>Football</button>
+        <button class='items' id='linux'>Linux Friends</button>
     </div>
 
     <!-- Competitive Programming Block that appears after click on "#cp" button -->
@@ -37,7 +38,11 @@
         {{ put_all_in_a_table (study_sites, 5) }}
     </div>
 
-    <div class='block'>
+    <div class='block' id='_football'>
+    </div>
+
+    <div class='block' id='_linux'>
+        {{ put_all_in_a_table (linux_sites, 5) }}
     </div>
 
     <div id='search_box'>
@@ -55,20 +60,4 @@
 # endblock
 
 # block scripts
-    $(document).ready (function () { 
-        $("#cp").click (function () {
-            $("#_study").hide();
-            $("#_cp").fadeToggle();
-        });
-
-        $("#study").click (function () {
-            $("#_cp").hide();
-            $("#_study").fadeToggle();
-        });
-
-        $("#football").click (function () {
-            document.getElementById ("block_cp").style.display = "none";
-        });
-    });
-
 # endblock

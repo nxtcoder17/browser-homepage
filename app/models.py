@@ -43,3 +43,14 @@ def football_sites():
 
     sites = []
     sites.append (Container ("goal.jpg", "https://www.goal.com"))
+
+def linux_sites():
+    class Container:
+        def __init__ (self, img, url):
+            self.img = 'linux/' + img;
+            self.url = url
+
+    sites = []
+    sites.append (Container ("distowatch.png", "https://distrowatch.com"))
+    return sites
+

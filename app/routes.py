@@ -6,7 +6,8 @@ from app import models
 def index():
     return render_template ("index.html", 
                     cp_sites = models.cp_sites(),
-                    study_sites = models.study_sites())
+                    study_sites = models.study_sites(),
+                    linux_sites = models.linux_sites())
 
 @app.route ('/favicon.ico')
 def favicon():

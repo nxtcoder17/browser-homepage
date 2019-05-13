@@ -21,6 +21,7 @@ body {
 
 .items_row {
     display: inline-block;
+    margin: 10px;
 }
 
 .items {
@@ -58,7 +59,8 @@ button::-moz-focus-inner {
     /* border: 2px solid red; */
     background-color: black;
     border: 5px solid var(--my-green);
-    margin: 5px;
+    margin: 10px;
+    margin-top: 0px;
 }
 
 .block img {

@@ -1,3 +1,22 @@
+
+/* Configuring Button Clicks on the Items Row */
+/* ++++++++++++++++++++++++++++++++++++++++++ */
+
+$(document).ready (function () {
+    $('.items').click (function () {
+        var id = this.id;
+        console.log (id);
+        /* Removing any already being displayed box */
+        $('.items').each (function () {
+            if (this.id != id)
+                $("#_" + this.id).hide();
+        });
+
+        $("#_" + this.id).fadeToggle("fast");
+        /* console.log ("Inside it"); */
+    });
+});
+
 var dict = {
     'google': 'https://www.google.com/search?q=QUERY',
     'duckduckgo': 'https://www.duckduckgo.com/q=QUERY',
